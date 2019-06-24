@@ -111,10 +111,10 @@ _HTTP Method:_ **[POST]**
 
 #### Request Body
 
-| Name       |  Type  | 
-| ---------- | :----: | ---------------------------------------------------------:
-| `username` | String |                           Must match username in database.
-| `password` | String | Must match password to corresponding username in database.
+| Name       |  Type  |                                                Description |
+| ---------- | :----: | ---------------------------------------------------------: |
+| `username` | String |                           Must match username in database. |
+| `password` | String | Must match password to corresponding username in database. |
 
 #### Example
 
@@ -124,4 +124,22 @@ _HTTP Method:_ **[POST]**
   "password": "ilovemoney"
 }
 ```
+
+#### Response
+
+##### 200 (OK)
+
+> If you successfully log in, the endpoint will return an HTTP response with a status code `200`.
+
+##### 400 (Bad Request)
+
+> If you are missing a username or a password, the endpoint will return an HTTP response with a status code of `400`.
+
+##### 401 (Unauthorized)
+
+> If you provide invalid credentials, the endpoint will return an HTTP response with a status code of `401`.
+
+##### 500 (Internal Service Error)
+
+> If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
 
