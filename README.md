@@ -1,6 +1,6 @@
 # Virtual Reality Funding Platform
 
-##API Documentation
+## API Documentation
 
 ### Dummy Data
 
@@ -143,3 +143,155 @@ _HTTP Method:_ **[POST]**
 
 > If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
 
+# User Routes
+
+## Get Users
+
+### Gets a list of users.
+
+_Method URL:_ `/api/users/`
+
+_HTTP Method:_ **[GET]**
+
+#### Headers
+
+| Name            |  Type  | Required |              Description |
+| --------------- | :----: | -------: | -----------------------: |
+| `Content-Type`  | String |      Yes | Must be application/JSON |
+| `Authorization` | String |      Yes |           JSON Web Token |
+
+#### Response
+
+##### 200 (OK)
+
+> If users are found, the endpoint will return an HTTP response with a status code `200`.
+
+##### 404 (Not Found)
+
+> If users are not found, the endpoint will return an HTTP response with a status code `404`.
+
+##### 401 (Unauthorized)
+
+> If user does not have access, the endpoint will return an HTTP response with a status code of `401`.
+
+##### 500 (Internal Service Error)
+
+> If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
+
+## Get User
+
+### Gets user by ID with associated plants.
+
+_Method URL:_ `/users/:id`
+
+_HTTP Method:_ **[GET]**
+
+#### Headers
+
+| Name            |  Type  | Required |              Description |
+| --------------- | :----: | -------: | -----------------------: |
+| `Content-Type`  | String |      Yes | Must be application/JSON |
+| `Authorization` | String |      Yes |           JSON Web Token |
+
+#### Response
+
+##### 200 (OK)
+
+> If user with specified ID is found, the endpoint will return an HTTP response with a status code `200`.
+
+##### 404 (Not Found)
+
+> If user with specified ID is not found, the endpoint will return an HTTP response with a status code `404`.
+
+##### 401 (Unauthorized)
+
+> If user does not have access, the endpoint will return an HTTP response with a status code of `401`.
+
+##### 500 (Internal Service Error)
+
+> If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
+
+## Delete User
+
+### Deletes user by ID.
+
+_Method URL:_ `/users/:id`
+
+_HTTP Method:_ **[DELETE]**
+
+#### Headers
+
+| Name            |  Type  | Required |              Description |
+| --------------- | :----: | -------: | -----------------------: |
+| `Content-Type`  | String |      Yes | Must be application/JSON |
+| `Authorization` | String |      Yes |           JSON Web Token |
+
+#### Response
+
+##### 200 (OK)
+
+> If user with specified ID is found and deleted, the endpoint will return an HTTP response with a status code `200`.
+
+##### 404 (Not Found)
+
+> If user with specified ID is not found, the endpoint will return an HTTP response with a status code `404`.
+
+##### 401 (Unauthorized)
+
+> If user does not have access, the endpoint will return an HTTP response with a status code of `401`.
+
+##### 500 (Internal Service Error)
+
+> If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
+
+## Update User
+
+### Updates user by ID.
+
+_Method URL:_ `/users/:id`
+
+_HTTP Method:_ **[PUT]**
+
+#### Headers
+
+| Name            |  Type  | Required |              Description |
+| --------------- | :----: | -------: | -----------------------: |
+| `Content-Type`  | String |      Yes | Must be application/JSON |
+| `Authorization` | String |      Yes |           JSON Web Token |
+
+#### Body
+
+| Name          |  Type  | Required |     Description |
+| ------------- | :----: | -------: | --------------: |
+| `username`    | String |      Yes | Must be unique. |
+| `password`    | String |      Yes |                 |
+| `phoneNumber` | String |       No |                 |
+
+#### Example
+
+```
+{
+  "username": "vrproject",
+  "password": "ilovemoney",
+  "name": "John",
+  "about": "Tech developer"
+}
+```
+
+#### Response
+
+##### 200 (OK)
+
+> If user with specified ID is found and updated, the endpoint will return an HTTP response with a status code `200`.
+
+##### 404 (Not Found)
+
+> If user with specified ID is not found, the endpoint will return an HTTP response with a status code `404`.
+
+##### 401 (Unauthorized)
+
+> If user does not have access, the endpoint will return an HTTP response with a status code of `401`.
+
+##### 500 (Internal Service Error)
+
+> If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
