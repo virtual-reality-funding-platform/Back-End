@@ -6,7 +6,8 @@ module.exports = {
   findBy, 
   findById, 
   remove, 
-  update
+  update,
+  findProjectsByUserId
 };
 
 function find() {
@@ -27,6 +28,12 @@ function findById(id) {
     .where({ id })
     .first();
 };
+
+async function findProjectsByUserId(id) {
+  const projects = await db('projects').where({ user_id: id });
+  console.log(projects)
+  return projects;
+}
 
 function remove(id) {
   return db('users')
