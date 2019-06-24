@@ -1,5 +1,25 @@
 # Virtual Reality Funding Platform
 
+##Table of Contents
+
+- [Dummy Data](#dummy-data)      
+- [Auth Routes](#auth-routes)
+  * [Register](#register)    
+  * [Login](#login)    
+- [User Routes](#user-routes)
+  * [Get Users](#get-users)    
+  * [Get User](#get-user)
+  * [Get Projects by User ID](#get-projects-by-user-id)
+  * [Delete User](#delete-user)
+  * [Update User](#update-user)
+- [Project Routes](#project-routes)
+  * [Create Project](#create-project)    
+  * [Get Projects](#get-projects)    
+  * [Get Projects](#get-projects-1)    
+  * [Update Project](#update-project)    
+  * [Delete Project](#delete-project)
+    
+
 ## API Documentation
 
 ### Dummy Data
@@ -149,7 +169,7 @@ _HTTP Method:_ **[POST]**
 
 ### Gets a list of users.
 
-_Method URL:_ `/api/users/`
+_Method URL:_ `/users/`
 
 _HTTP Method:_ **[GET]**
 
@@ -211,7 +231,7 @@ _HTTP Method:_ **[GET]**
 
 > If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
 
-## Get Projects by User ID.
+## Get Projects by User ID
 
 ### Gets all projects for specified user.
 
