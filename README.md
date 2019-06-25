@@ -1,6 +1,6 @@
 # Virtual Reality Funding Platform
 
-##Table of Contents
+## Table of Contents
 
 - [Dummy Data](#dummy-data)      
 - [Auth Routes](#auth-routes)
