@@ -11,16 +11,22 @@ exports.seed = function(knex, Promise) {
           id: 1, 
           username: 'admin',
           password: bcrypt.hashSync('password', 10),
-          name: 'Test 1',
-          about: 'test account',
+          name: 'Leonel, Gabriel, and Mateo',
+          about: 'We are a team of drone hobbyists.',
         },
-
         {
           id: 2, 
           username: 'admin2',
-          password: bcrypt.hashSync('password2', 10),
-          name: 'Test 2',
-          about: 'test account 2',
+          password: bcrypt.hashSync('password', 10),
+          name: 'Jayla',
+          about: 'I created a small 3D printing business.',
+        },
+        {
+          id: 3, 
+          username: 'admin3',
+          password: bcrypt.hashSync('password', 10),
+          name: 'Aaliyah and Trinity',
+          about: 'We are working to create drought resistance crops.',
         },
        
       ]);
