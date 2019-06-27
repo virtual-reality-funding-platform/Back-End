@@ -19,7 +19,7 @@ router.get('/', restricted, (req, res) => {
     res.status(500).send(error));
 });
 
-router.get('/:id', restricted, (req, res) => {
+router.get('/:id', (req, res) => {
   Users.findById(req.params.id)
     .then(user => {
       if (user) {
