@@ -156,6 +156,12 @@ _HTTP Method:_ **[POST]**
 
 #### Response
 
+```
+{
+  "name": "John",
+  "about": "Tech developer"
+}
+
 ##### 200 (OK)
 
 > If you successfully log in, the endpoint will return an HTTP response with a status code `200`.
@@ -215,12 +221,9 @@ _Method URL:_ `/users/:id`
 
 _HTTP Method:_ **[GET]**
 
-#### Headers
+#### Return
 
-| Name            |  Type  | Required |              Description |
-| --------------- | :----: | -------: | -----------------------: |
-| `Content-Type`  | String |      Yes | Must be application/JSON |
-| `Authorization` | String |      Yes |           JSON Web Token |
+
 
 #### Response
 
