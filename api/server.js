@@ -17,7 +17,11 @@ server.use('/auth', authRouter);
 server.use('/projects', projectsRouter);
 
 server.get('/', (req,res) => {
+  try {
   res.send("Oh hey there! I'm the server!");
+  } catch(error) {
+    res.status(500).json(error.response);
+  }
 });
 
 module.exports = server;
