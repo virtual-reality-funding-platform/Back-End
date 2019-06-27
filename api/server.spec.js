@@ -14,4 +14,18 @@ describe('server', () => {
       expect(process.env.DB_ENV).toBe('testing');
     });    
   })
+
+  describe("GET /projects", () => {
+    it('should return 200 ok', async () => {
+      const res = await request(server).get('/projects');
+
+      expect(res.status).toEqual(200);
+    })
+
+    it('should return JSON', async () => {
+      const res = await request(server).get('/projects');
+
+      expect(res.type).toBe('application/json');
+    })
+  })
 })
